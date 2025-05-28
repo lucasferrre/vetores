@@ -3,7 +3,7 @@ Depois disso, peça para o usuário digitar um número (chave) e seu programa de
 que posições essa chave foi encontrada. Mostre também quantas vezes a chave foi sorteada.*/
 
 let numerosAleatorios = [];
-let posicoes = ""; 
+let posicoes = ""; // eu posso ir adicionando os índeces dos numeros aleatorios numa string
 let totalOcorrencias = 0; 
 
 // Preenche a lista/Vetor com 30 números aleatórios entre 1 e 15
