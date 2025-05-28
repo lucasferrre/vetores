@@ -16,8 +16,9 @@ do {
     numeroChave = parseInt(prompt("Digite um número entre 1 e 15 para buscar:"));
     if (isNaN(numeroChave)) {
         alert("Você não digitou um número, por favor tente novamente!😅");
+        continue;
     }
-} while (numeroChave < 1 || numeroChave > 15);
+} while (isNaN(numeroChave) || numeroChave < 1 || numeroChave > 15);// quando usa o do while temos que confirmar dentro dele também a condição isNaN
 
 // Vai Buscar o numero Chave digitado na lista numerosAleatorios
 for (let index = 0; index < 30; index++) {
