@@ -11,17 +11,17 @@ for (let contador = 0; contador < 30; contador++) {
     numerosAleatorios[contador] = Math.floor(Math.random() * 15) + 1;
 }
 
-let chave;
+let numeroChave;
 do {
-    chave = parseInt(prompt("Digite um número entre 1 e 15 para buscar:"));
-    if (isNaN(chave)) {
+    numeroChave = parseInt(prompt("Digite um número entre 1 e 15 para buscar:"));
+    if (isNaN(numeroChave)) {
         alert("Você não digitou um número, por favor tente novamente!😅");
     }
-} while (chave < 1 || chave > 15);
+} while (numeroChave < 1 || numeroChave > 15);
 
-// Vai Buscar a chave digitada no numerosAleatorios
+// Vai Buscar o numero Chave digitado na lista numerosAleatorios
 for (let index = 0; index < 30; index++) {
-    if (numerosAleatorios[index] === chave) {
+    if (numerosAleatorios[index] === numeroChave) {
         if (posicoes !== "") { // Se já tiver alguma posição, ele adiciona vírgula com um espaço e a mais o novo valor
             posicoes += ", ";
         }
@@ -32,10 +32,10 @@ for (let index = 0; index < 30; index++) {
 
 console.log("Lista gerada:", numerosAleatorios);
 if (totalOcorrencias > 0) {
-    console.log(`O número ${chave} foi encontrado nas posições: ${posicoes}`);
+    console.log(`O número ${numeroChave} foi encontrado nas posições: ${posicoes}`);
     console.log(`Total de ocorrências: ${totalOcorrencias}`);
     alert("Os número foi verificado na lista! Confira a lista no console!😉");
 } else {
-    console.log(`O número ${chave} não foi encontrado na lista.`);
+    console.log(`O número ${numeroChave} não foi encontrado na lista.`);
     alert("Que Pena! Seu número não foi encontrado na lista!😭");
 }
